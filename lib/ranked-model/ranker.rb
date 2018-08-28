@@ -103,7 +103,7 @@ module RankedModel
       end
 
       def rank_changed?
-        instance.send "#{ranker.column}_changed?"
+        instance.send "saved_change_to_#{ranker.column}?"
       end
 
       def new_record?
